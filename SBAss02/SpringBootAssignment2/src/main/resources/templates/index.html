@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Boot Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+    crossorigin="anonymous">
+    
+    <style type="text/css">
+    * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #f2f2f2;
+	background-color: seagreen;
+	margin-bottom: 3%;
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.btn-seagreen {
+	background-color: seagreen;
+    color: black;
+    font-weight: 400;
+}
+
+
+.btn-seagreen:hover {
+    background-color: #f2f2f2;
+    color: black;
+}
+    
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to our Portal</h1>
+	
+    <!-- This is a Bank Navigation -->
+	<div class="container text-center">
+        <div class="d-grid gap-4">
+            <a href="#" class="btn btn-seagreen w-90" data-bs-toggle="modal" data-bs-target="#servicesModal" >Services</a>
+            <a href="#" class="btn btn-seagreen w-90" data-bs-toggle="modal" data-bs-target="#branchesModal" >Branches</a>
+        </div>
+    </div>
+
+  
+  <!-- Modal 1-->
+  <div class="modal fade" id="servicesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="exampleModalLabel">Enter Bank Name</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+                <form action="/services" method="POST">
+                    <div class="mb-3">
+                        <label for="banknm" class="form-label">Enter the name of a Bank: </label>
+                        <input type="text" name="bankname" id="banknm" class="form-control" required/>
+                    </div>
+          </div>
+          </div>
+                    <div class="modal-footer">
+                    <button type="submit" class="btn btn-seagreen">Submit</button>
+                    </div>
+                </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal fade" id="branchesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="exampleModalLabel">Enter Bank Name</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+                <form action="/branches" method="POST">
+                    <div class="mb-3">
+                        <label for="banknm" class="form-label">Enter the name of a Bank: </label>
+                        <input type="text" name="bankname" id="banknm" class="form-control" required/>
+                    </div>
+          </div>
+          </div>
+                    <div class="modal-footer">
+                    <button type="submit" class="btn btn-seagreen">Submit</button>
+                    </div>
+                </form>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+    crossorigin="anonymous"></script>
+  </body>
+</html>
